@@ -1,0 +1,81 @@
+li {
+  padding: 15px;
+  margin: 15px;
+  background: hsl(46, 40%, 20%);
+  list-style: none;
+  font-size: 20px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 1fr;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	}
+
+.eat{
+
+	background-color: khaki;
+}
+.cooked{
+	position: relative;
+	left: 0%;
+	width: 35%;
+	margin-right: 15%;
+	color: rgb(128, 116, 11);
+}
+.eaten{
+	position: relative;
+	right: 0%;
+	width: 35%;
+	margin-left: 15%;
+	color: rgb(128, 116, 11);
+}
+.center {
+	text-align: center;
+}
+
+.right {
+	align-content: right;
+}
+
+.main{
+	background-image: url("../img/burger.png");
+	background-repeat: no-repeat;
+	background-position: 50% 30%;
+}
+h1 {
+	font-style: italic;
+	font-weight: 800;
+	font-size: 50px;
+	text-align: center;
+	text-shadow: 2px 2px rgba(77, 7, 7, 0.021);
+	color: rgb(133, 13, 37);
+}
+
+h2 {
+	text-align: center;
+	text-shadow: 2px  darkgray;
+	color: hsl(46, 40%, 20%);
+	font-weight: 600;
+}
+
+.create-update-form {
+  background: hsl(149, 69%, 22%);
+  border: 1px rgb(4, 58, 16) solid;
+}
+
+
+
+
+
+
+body { 
+	
+	background-color: #797318;  
+}
+
+div, body{
+	font-family: exo, sans-serif;
+	color: black;
+}
+
+
