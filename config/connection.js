@@ -7,7 +7,7 @@ var connection = mysql.createConnection({
     user: "root",
    // Your password
     password: "password",
-    database: "Burger_list"
+    database: "burgers"
   });
 
   //  connection promise------------------------
