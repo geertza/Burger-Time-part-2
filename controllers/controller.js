@@ -2,11 +2,11 @@ var express = require("express");
 var router = express.Router();
 
 // Import the model (burger.js) to use its database functions.
-var control = require("../models/burger-model.js");
+var model = require("../models/burger-model.js");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
-  control.all(function(data) {
+  model.all(function(data) {
     var hbsObject = {
       burgers: data
     };
@@ -16,10 +16,10 @@ router.get("/", function(req, res) {
 });
 
 router.post("/", function(req, res) {
-  control.create([
-    "burger_name", "devoured"
+  model.create([
+    "burger_name"
   ], [
-    req.body.burger_name, req.body.devoured
+    req.body.burger_name
   ], function() {
     res.redirect("/");
   });

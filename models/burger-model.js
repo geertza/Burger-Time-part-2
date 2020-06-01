@@ -8,8 +8,8 @@ var burger = {
     });
   },
   // create a new burger in database
-  create: function(cols, vals, cb) {
-    orm.create("burgers", cols, vals, function(res) {
+  create: function(burger_name,vals, cb) {
+    orm.create(vals, function(res) {
       cb(res);
     });
   },
