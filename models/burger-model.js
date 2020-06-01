@@ -14,12 +14,12 @@ var burger = {
     });
   },
   // update database value
-  update: function(objColVals, condition, cb) {
-    orm.update("burgers", objColVals, condition, function(res) {
-      cb(res);
-    });
+  update: function(id, cb) {
+    var condition = `id=${id}`;
+    orm.update("burgers", {devoured: true}, condition, cb);     
+
   }
-};
+}
 
 // Export the database functions to use in  controller
 module.exports = burger;
