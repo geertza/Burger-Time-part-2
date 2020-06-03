@@ -4,7 +4,7 @@
   "description": "",
   "main": "server-express.js",
   "scripts": {
-    "start": "node server-express.js"
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
