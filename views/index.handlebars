@@ -2,29 +2,30 @@
 	
 	<div class="row">
 	    <div class="center col-sm-12">
-	        <h1>Eat-Da-Burger App</h1>
+	        <h1>Burger Time </h1>
+			<h1> Part II</h1>
 	       </div>
   	</div>
 	
 	{{!-- burger lists_____________________________________________ --}}
 	<div class="row main">
-	    <div class="col-sm-6 cooked">
+	    <div class="col-sm-4 cooked">
 
 			<br>
-			<h2>Burgers Available To Eat!</h2>
+			<h2>Yummy!! Burgers to Eat!</h2>
 			<br>
 			<ul>
 			  {{#each burgers}}
 			    {{#unless this.devoured}}
 			      <li>
 			      	<div>
-					  {{this.id}}
+					  
 			        {{this.burger_name}}
 					</div>
 					<div>
 			       <form action="/{{this.id}}?_method=PUT" method="POST">
 			          <input type="hidden" name="devoured" value="true">
-			          <button class="btn-primary" type="submit">Devour It!</button>
+			          <button class="btn" id="thrash" type="submit">Eat!!</button>
 			        </form>
 					</div>
 			      </li>
@@ -34,20 +35,23 @@
 
 	    </div>
 
-	    <div class="col-sm-6 eaten">
+	    <div class="col-sm-4 eaten">
 
-			<h2>Burgers That Have Been Eaten!</h2>
-			
+			<h2>Burger wrappers</h2>
+			 
 			  {{#each burgers}}
 			    {{#if this.devoured}}
 			      <li>
-			      	{{this.id}}
+			      	
 			        {{this.burger_name}}
 
 			      </li>
 			    {{/if}}
 			  {{/each}}
-			
+			<form action="/delete">
+			          <input type="hidden"  >
+			          <button class="btn" id="thrash" type="submit">Empty Thrash Can</button>
+			        </form>
 	    </div>
 
   	</div>
@@ -56,7 +60,7 @@
 	<div class="row">
 	    <div class="center col-sm-12 add_food">
 
-			<h2>Add A Burger!</h2>
+			<h2>Cook A Burger!</h2>
 
 			<form class="create-update-form" action="/" method="POST">
 
@@ -69,7 +73,7 @@
 			</form>
 
 	    </div>
-	
+	 	<img src="/assets/img/wimpy.png" class="wimpy">
   	</div>
 	<!-- end .row -->
 

@@ -3,7 +3,7 @@ li {
   margin: 15px;
   background: hsl(46, 40%, 20%);
   list-style: none;
-  font-size: 20px;
+  font-size: 1vw;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: 1fr;
@@ -11,10 +11,7 @@ li {
 	grid-row-gap: 0px;
 	}
 
-.eat{
 
-	background-color: khaki;
-}
 .cooked{
 	position: relative;
 	left: 0%;
@@ -36,16 +33,32 @@ li {
 .right {
 	align-content: right;
 }
-
+#thrash{
+	background-color: darkgreen;
+	color: rgb(192, 192, 68);
+	float: right;
+	font-size: 1.5vw;
+}
+.wimpy{
+	height: 20vw;
+	position: absolute;
+	opacity: .95;
+	right: 45%;
+	top:27%;
+	z-index: 2;
+}
 .main{
+	
 	background-image: url("../img/burger.png");
 	background-repeat: no-repeat;
 	background-position: 50% 30%;
+	height: 60vh;
 }
 h1 {
-	font-style: italic;
-	font-weight: 800;
-	font-size: 50px;
+	font-family: future;
+	font-size: 65px;
+	margin: 3px;
+	border: 0px;
 	text-align: center;
 	text-shadow: 2px 2px rgba(77, 7, 7, 0.021);
 	color: rgb(133, 13, 37);
@@ -56,6 +69,10 @@ h2 {
 	text-shadow: 2px  darkgray;
 	color: hsl(46, 40%, 20%);
 	font-weight: 600;
+	background-color: rgb(175, 46, 23);
+	border-radius: 20px;
+	font-size: 2vw;
+	
 }
 
 .create-update-form {
@@ -64,13 +81,10 @@ h2 {
 }
 
 
-
-
-
-
 body { 
 	
-	background-color: #797318;  
+	background-color: #797318; 
+	font-size: 1vw; 
 }
 
 div, body{
@@ -78,4 +92,9 @@ div, body{
 	color: black;
 }
 
+@font-face {
+	font-family: future;
+	src: url(../fonts/SFAlienEncounters.ttf);
+  }
 
+  

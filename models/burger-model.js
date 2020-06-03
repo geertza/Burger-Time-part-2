@@ -18,6 +18,11 @@ var burger = {
     var condition = `id=${id}`;
     orm.update("burgers", {devoured: true}, condition, cb);     
 
+  },
+  delete: function(cb) {
+   
+    orm.delete("burgers.burgers", "devoured= '1'", cb);     
+
   }
 }
 
