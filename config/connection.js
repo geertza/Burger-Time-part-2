@@ -1,5 +1,13 @@
 const mysql = require('mysql')
-var connection = mysql.createConnection({
+ 
+
+
+var connection;
+if (process.env.JAWSDB_URL) {
+    // Database is JawsDB on Heroku
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+connection = mysql.createConnection({
     host: "localhost",
   //  port
     port: 3306,
@@ -9,7 +17,7 @@ var connection = mysql.createConnection({
     password: "password",
     database: "burgers"
   });
-
+}
   //  connection promise------------------------
   connection.connect(function(err) {
     if (err) throw err;
