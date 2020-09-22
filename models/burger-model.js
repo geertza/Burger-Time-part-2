@@ -21,7 +21,7 @@ var burger = {
   },
   delete: function(cb) {
    
-    orm.delete("burgers.burgers", "devoured= '1'", cb);     
+    orm.delete("burgers", "devoured= '1'", cb);     
 
   }
 }
