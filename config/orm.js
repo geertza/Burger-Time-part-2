@@ -46,7 +46,7 @@ var orm = {
   },
   // make new burger
   create: function(vals, cb) {
-    var queryString = `INSERT INTO burgers.burgers(burger_name, devoured) VALUES('${vals}','0')`;;
+    var queryString = `INSERT INTO burgers(burger_name, devoured) VALUES('${vals}','0')`;;
     connection.query(queryString, vals, function(err, result) {
       if (err) {
         throw err;
