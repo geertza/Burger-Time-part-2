@@ -1,80 +1,62 @@
-<div class="container bg">
-	
-	<div class="row">
-	    <div class="center col-sm-12">
-	        <h1>Burger Time </h1>
-			<h1> Part II</h1>
-	       </div>
-  	</div>
-	
-	{{!-- burger lists_____________________________________________ --}}
-	<div class="row main">
-	    <div class="col-sm-4 cooked">
 
-			<br>
-			<h2>Yummy!! Burgers to Eat!</h2>
-			<br>
-			<ul>
-			  {{#each burgers}}
-			    {{#unless this.devoured}}
-			      <li>
-			      	<div>
-					  
-			        {{this.burger_name}}
-					</div>
-					<div>
-			       <form action="/{{this.id}}?_method=PUT" method="POST">
-			          <input type="hidden" name="devoured" value="true">
-			          <button class="btn" id="thrash" type="submit">Eat!!</button>
-			        </form>
-					</div>
-			      </li>
-			    {{/unless}}
-			  {{/each}}
-			</ul>
+<h1>Burger Time   Part II</h1>
 
-	    </div>
+<div class="container">
+  <div class="row main">  
+	<div class=" cooked col-sm-4 eat">
+		{{!-- eat---------------- --}}
+		<h2>Yummy!! Burgers to Eat!</h2>
+        <ul>
+                {{#each burgers}}
+                    {{#unless this.devoured}}
+            <li>
+                {{this.burger_name}}
+            {{!-- move to trash  --}}
+            <form action="/{{this.id}}?_method=PUT" method="POST"  >
+                <input type="hidden" name="devoured" value="true" ></input>
+                <button class="btn eatButton" id="thrash" type="submit">Eat!!</button>
+            </form>
+            </li>
+                {{/unless}}
+                {{/each}}
+        </ul>
+    </div> 
+		{{!-- cook --}}
+	<div class="col-sm-3 addFood">
+      	<h2>Cook A Burger!</h2>
+	  	<form class="create-update-form" action="/" method="POST">
+		    <div class="form-group">
+			<p>Enter a burger you want to order and click the Submit Order button.</p>
+			<input type="text" id="AddBurger" name="burger_name" class="eatButton">
+			</div>
+			<button class="btn-primary" type="submit">Grill Time</button>
+		</form>
+		<img src="/assets/img/wimpy.png" class="wimpy">
+	</div>
 
-	    <div class="col-sm-4 eaten">
 
+        <div class=" eaten col-sm-4">
 			<h2>Burger wrappers</h2>
-			 
-			  {{#each burgers}}
-			    {{#if this.devoured}}
-			      <li>
-			      	
-			        {{this.burger_name}}
-
-			      </li>
-			    {{/if}}
-			  {{/each}}
 			<form action="/delete">
-			          <input type="hidden"  >
-			          <button class="btn" id="thrash" type="submit">Empty Thrash Can</button>
-			        </form>
-	    </div>
-
-  	</div>
-	<!-- end .row -->
-
-	<div class="row">
-	    <div class="center col-sm-12 add_food">
-
-			<h2>Cook A Burger!</h2>
-
-			<form class="create-update-form" action="/" method="POST">
-
-			  <div class="form-group">
-			    <p>Enter a burger you want to order and click the Submit Order button.</p>
-			    <input type="text" id="AddBurger" name="burger_name">
-			  </div>
-			  
-			  <button class="btn-primary" type="submit">Submit Order</button>
-			</form>
-
-	    </div>
-	 	<img src="/assets/img/wimpy.png" class="wimpy">
-  	</div>
-	<!-- end .row -->
-
+                <input type="hidden"  >
+                <button class="btn eatButton" id="thrash" type="submit">Empty Thrash Can</button>
+            </form>
+            
+                {{#each burgers}}
+                {{#if this.devoured}}
+            <li>
+                {{this.burger_name}}
+            </li>
+                {{/if}}
+                {{/each}}
+            
+        </div>    
+  
+					
+				</form>
+			 
+			</div>
+			
+    </div>
+  </div>
 </div>

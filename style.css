@@ -1,0 +1,132 @@
+h1 {
+	font-family: future;
+	font-size: 5vw;
+	border: 0px;
+	text-align: center;
+	color: rgb(133, 13, 37);
+	background-color: rgba(245, 245, 245, 0.51);
+	width: 100vw;
+	padding: 0;
+	margin: 2% 0;
+	line-height: 10vh;
+	height: 10vh;
+}
+h2 {
+	text-align: center;
+	color: hsl(46, 40%, 20%);
+	font-weight: 600;
+	background-color: rgb(206, 52, 25);
+	border-radius: 20px;
+	font-size: 2vw;
+}
+
+li {
+  padding: 15px;
+  margin: 15px;
+  background: hsl(46, 40%, 20%);
+  list-style: none;
+  font-size: 1.5vw;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 1fr;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	}
+.eat{
+	color: tomato;
+	font-size: 50vh;
+	background-color: teal;
+}
+.inline{
+	display: inline-flex;
+}
+.addFood{
+	background-color: tomato;
+	width:30vw;
+	margin-left: 4%;
+	color: gold;
+	background-color: darkgreen;
+	line-height: 100%;
+	padding: 3px;
+}
+.submit{
+	background-color: rgb(182, 57, 35);
+	color: gold;
+	font-weight: 700;
+	text-emphasis: none;
+	border-radius: 0 30px 30px 0;
+	padding: 3px;
+}
+
+.cooked{
+	width: 30vw;
+	color: rgb(128, 116, 11);
+	margin-left: 4%;
+}
+.eaten{
+	margin-left: 4%;
+	width: 30vw;
+	/* margin-left: 15%; */
+	color: rgb(128, 116, 11);
+}
+
+/* #thrash{
+	background-color: darkgreen;
+	color: rgb(192, 192, 68);
+	float: right;
+	font-size: 1.5vw;
+} */
+.wimpy{
+	height: 40vw;
+	/* position: absolute; */
+	/* right: 5%; */
+	/* top:27%; */
+	/* z-index: 2; */
+}
+.main{
+	
+	background-image: url("../img/burger.png");
+	background-repeat: no-repeat;
+	background-position: 50% 30%;
+	/* height: 60vh; */
+}
+
+
+
+
+/* .create-update-form {
+  background: hsl(149, 69%, 22%);
+  border: 1px rgb(4, 58, 16) solid;
+} */
+
+
+body { 
+	background-color: #797318; 
+	font-size: 1.5vw;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden; 
+}
+
+/* div, body{
+	font-family: exo, sans-serif;
+	color: black;
+} */
+
+@font-face {
+	font-family: future;
+	src: url(../fonts/SFAlienEncounters.ttf);
+  }
+
+
+  /* @media screen and (max-width: 650px) {
+.wimpy{
+	position: absolute;
+	top: 0%;
+	left: 15%;
+	height: 20vw;
+}
+
+  } */
+
+  
